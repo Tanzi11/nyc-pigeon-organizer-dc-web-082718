@@ -7,5 +7,11 @@ pigeon_hash = {}
           # binding.pry
           pigeon_hash[pigeon] = {} 
         end
+          if pigeon_hash[pigeon][attribute]
+          pigeon_hash[pigeon][attribute] << specific_values.to_s
+        else
+          pigeon_hash[pigeon][attribute] = []
+          pigeon_hash[pigeon][attribute] << specific_values.to_s
+        end
         
 end
